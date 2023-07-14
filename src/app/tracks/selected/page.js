@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Container, Row, Col } from 'react-grid-system';
 import Footer from "@/app/components/Footer";
 import styles from '../../details.module.css'
+import dotenv from 'dotenv'
 function Selected()
 {
 
@@ -23,7 +24,7 @@ function Selected()
                 headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: 'grant_type=client_credentials&client_id=' +  process.env.client_id + '&client_secret=' + process.env.client_pass
+                body: 'grant_type=client_credentials&client_id=' +  process.env.REACT_APP_CLIENT_ID + '&client_secret=' + process.env.REACT_APP_CLIENT_PASS
                 }
                 
               fetch(url,authOptions).then(result=> result.json()).then(data =>  setToken(data.access_token))

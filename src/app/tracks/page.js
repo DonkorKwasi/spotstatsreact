@@ -12,6 +12,7 @@ import Footer from "../components/Footer.js";
 import { trackSelected } from "../results.js";
 import styles from '../cards.module.css'
 import {motion} from 'framer-motion'
+import dotenv from 'dotenv'
 function Tracks()
 {
 
@@ -58,14 +59,14 @@ console.log('token was called')
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
-          body: 'grant_type=client_credentials&client_id=' + process.env.client_id + '&client_secret=' + process.env.client_pass
+          body: 'grant_type=client_credentials&client_id=' + process.env.REACT_APP_CLIENT_ID + '&client_secret=' + process.env.REACT_APP_CLIENT_PASS
           }
           
         fetch(url,authOptions).then(result=> result.json()).then(data =>  setToken(data.access_token))
       }
       var songs;
 //get input from router path
-;
+
 let path = useSearchParams().toString()
 const input = path.split('=')[1];
 
