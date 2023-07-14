@@ -17,14 +17,14 @@ function Selected()
    async function getToken(){
       console.log('token was called')
             
-            
+          
               const url = 'https://accounts.spotify.com/api/token';
               const authOptions = {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: 'grant_type=client_credentials&client_id=' +  process.env.REACT_APP_CLIENT_ID + '&client_secret=' + process.env.REACT_APP_CLIENT_PASS
+                body: 'grant_type=client_credentials&client_id=' +  process.env.NEXT_PUBLIC_CLIENT_ID + '&client_secret=' + process.env.NEXT_PUBLIC_CLIENT_PASS
                 }
                 
               fetch(url,authOptions).then(result=> result.json()).then(data =>  setToken(data.access_token))
