@@ -15,8 +15,7 @@ function Selected()
 
    async function getToken(){
       console.log('token was called')
-              const client_id = '3b4a09d08d634156b36117aed03332e5';
-             const client_secret = 'f6f409a0924e4d09ad1630be3411d6a7';
+            
             
               const url = 'https://accounts.spotify.com/api/token';
               const authOptions = {
@@ -24,7 +23,7 @@ function Selected()
                 headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: 'grant_type=client_credentials&client_id=' + client_id + '&client_secret=' + client_secret
+                body: 'grant_type=client_credentials&client_id=' +  process.env.client_id + '&client_secret=' + process.env.client_pass
                 }
                 
               fetch(url,authOptions).then(result=> result.json()).then(data =>  setToken(data.access_token))
