@@ -1,0 +1,16 @@
+.textdata{
+    background-color: grey;
+    left: 40;
+    width: 640px;
+    text-align: center;
+ 
+
+}
+.textdata p {
+    color: #f2f4f5;
+}
+
+.cover{
+    width: 640px;
+    margin:auto;
+}

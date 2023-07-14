@@ -1,0 +1,11 @@
+.textFlow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.grids{
+display: flex;
+}
+
+.detailed{
+    display: flex;
+}

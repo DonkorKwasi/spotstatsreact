@@ -1,0 +1,16 @@
+.foot{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    
+}
+.foot p{
+    color: #f2f4f5;
+}
+
+.foot a {
+    color: #f2f4f5;
+}
