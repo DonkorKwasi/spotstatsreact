@@ -17,7 +17,8 @@ function Selected()
    async function getToken(){
       console.log('token was called')
             
-          
+      console.log(process.env.NEXT_PUBLIC_CLIENT_ID )
+      console.log(process.env.NEXT_PUBLIC_CLIENT_PASS)     
               const url = 'https://accounts.spotify.com/api/token';
               const authOptions = {
                 method: 'POST',
