@@ -32,7 +32,7 @@ const router = useRouter();
     //function for the pagination event
     const handleChange = (event,value) => {
 setPage(value)
-console.log(page)
+
 
     };
 
@@ -42,7 +42,7 @@ console.log(page)
 
      let x = page -1;
 let actualIndex =  (20 * x) + index;
-console.log(actualIndex);
+
 setSelect(allSongs[actualIndex]);
 router.push('/tracks/selected')
 
@@ -50,7 +50,7 @@ router.push('/tracks/selected')
 
     //function for retrieving a valid token for acessing the spotify api
     async function getToken(){
-console.log('token was called')
+
        
     
         const url = 'https://accounts.spotify.com/api/token';
@@ -83,11 +83,11 @@ const input = path.split('=')[1];
 
 if (token == "")
 {
-  console.log('here')
+  
   return;
 }
 
-console.log(token);
+
       const searchUrl = "https://api.spotify.com/v1/search?q="
       const searchOpt = {
         method: 'GET',
@@ -156,7 +156,7 @@ currentPoint = currentPoint.next
  
  var songs = totalSongs;
 
-console.log("ive been called")
+
 return totalSongs;
 
 
@@ -189,7 +189,8 @@ setDisplay(get);
 
   }
   else{
-    console.log('should be loading');
+    
+    
     let load = <h1>Loading up  to 220 results!</h1>
     setLoading(load)
   }
@@ -209,7 +210,8 @@ useEffect(() =>{
 //set the songs into a state after all the songs have finished loading from the api
 async function gettingTracks(){
  songs=  await trackSearch();
-console.log(songs);
+
+ 
  SetAllSongs(songs)
  
 }
@@ -221,17 +223,17 @@ console.log(songs);
 
 useEffect(() =>{
   songCard = null;
-  console.log(allSongs)
+ 
   currentPageData = [];
-console.log("page number:"+page);
+
 //get the songs data for the first page and create the ui cards for the first page
 if(allSongs.length > 0)
 {
-console.log("page was called")
-console.log(allSongs)
+
+
   //solving for where in the array we must  start displaying tracks from depending on what the current page is
 var start =  (page * pageLimit) - pageLimit
-console.log(start)
+
 //create the ui cards for the first page based off the data
 for(let x = start; x < (start + pageLimit); x++)
 {
@@ -259,7 +261,7 @@ if(remainder != 0)
 {
   wholeAmount++;
 }
-console.log(allSongs);
+
 
 
 pageinate = <Pagination className={styles.page} count={wholeAmount} page={page} onChange={handleChange}/>
@@ -323,7 +325,7 @@ else if(cardCount <  20 &&  cardCount >=  16)
 
 }
 //PUT EACH ROW ARRAY INTO A ROW GRID THING
-console.log(rows);
+
 }
 
 var row1 = <Row className={styles.row}>{rows[0]}</Row>;

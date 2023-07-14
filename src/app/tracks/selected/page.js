@@ -15,7 +15,7 @@ function Selected()
    const [token, setToken] = useState('');
 
    async function getToken(){
-      console.log('token was called')
+     
             
     
               const url = 'https://accounts.spotify.com/api/token';
@@ -54,8 +54,8 @@ useEffect(()=>{
 var specs;
    if(token != "")
    {  
-      console.log(token)
-      console.log(select.id)
+     
+      
   
    async function apiCall() {
    const searchUrl = "https://api.spotify.com/v1/audio-features/" + select.id
@@ -69,13 +69,13 @@ var specs;
     
    }
 
-   console.log(searchOpt);
+  
 
    const rep = await fetch(searchUrl,searchOpt)
   
 const details = await rep.json()
 specs = details
-console.log(specs);
+
 if( select != null && select!= undefined)
 {
 
@@ -130,7 +130,7 @@ let mode = "";
  
   let total = secondDuration + decimal;
  total = total.toString().replace('.',':')
-console.log(total);
+
 
 if(total.length==1)
 {
@@ -146,9 +146,8 @@ else if (total.length >4)
    total = (total[0]+ total[1] + total[2] + total[3]);
 }
 
-  console.log(firstDuration)
-  console.log(decimal)
-  console.log(secondDuration)
+
+
 if(specs.mode ==0)
 {
 mode = "Minor"

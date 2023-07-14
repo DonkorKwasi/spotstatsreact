@@ -9,7 +9,8 @@ function TrackCard(props)
         return (str.length > n) ? str.slice(0, n-1) + '...' : str;
       };
 
-    console.log(props?.song)
+    
+      
  let totalArtists = "";
     //create a function for gettin the names of all artists involved
     for(var i = 0; i < props.song?.artists?.length; i++)
