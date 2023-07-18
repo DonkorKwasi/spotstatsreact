@@ -197,6 +197,8 @@ setDisplay(get);
 
 },[allSongs])
 useEffect(() => {
+
+  document.title ="Spotify Stats"
       //get token on page mount
   async  function reactHAH(){
     await  getToken();

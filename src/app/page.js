@@ -60,9 +60,15 @@ setError(<p className={styles.error}>The search input must not be empty!</p>)
 
 //PUSH TO NEW PAGE AND SEND THE ARTIST DATA THERE
 }
+
+useEffect(()=> {
+document.title ="Spotify Stats"
+},[])
+
  
   return (
     <>
+    
     <div className={styles.controls}>
    <h1 className={styles.title}>Spotify stats</h1>
 <div className={styles.content}>
@@ -74,10 +80,14 @@ setError(<p className={styles.error}>The search input must not be empty!</p>)
 {errorTxt}
 <div className={styles.desc}>
   <p>
-Currently, this site is designed by to help users find detailed information about any song that is  available on spotify. Soon user accounts, voting and a leaderboard system will be implemented. Once those features are in place Spotify Stats will be more than a place for just information about music, it will be a great way to visualize and quantify fan reception to new music!</p>
+Currently, this site is designed by to help users find detailed information about any song that is  available on spotify. Soon, user accounts, voting and a leaderboard system will be implemented. Once those features are in place Spotify Stats will be more than a place for just information about music, it will be a great way to visualize and quantify fan reception to new music!</p>
 </div>
 </div>
 <Footer></Footer>
    </>
   )
+
+
 }
+
+

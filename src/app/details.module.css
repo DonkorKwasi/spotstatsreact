@@ -3,7 +3,7 @@
     left: 40;
     width: 640px;
     text-align: center;
- 
+    border-radius: 10px;
 
 }
 .textdata p {
@@ -13,4 +13,5 @@
 .cover{
     width: 640px;
     margin:auto;
+ 
 }
